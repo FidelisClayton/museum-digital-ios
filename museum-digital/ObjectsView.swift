@@ -13,7 +13,7 @@ struct ObjectsView: View {
         ScrollView(showsIndicators: false) {
             VStack(spacing: 20) {
                 ForEach(objects) { object in
-                    NavigationLink(destination: Text("Object")) {
+                    NavigationLink(destination: ObjectView(object: object)) {
                         SingleObjectView(object: object)
                     }
                     .buttonStyle(PlainButtonStyle())

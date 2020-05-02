@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		70694098245D5BEB003273CE /* ObjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70694097245D5BEB003273CE /* ObjectsView.swift */; };
+		7069409A245D68D9003273CE /* ObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70694099245D68D9003273CE /* ObjectView.swift */; };
 		70AB5777245C876600D4EB45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB5776245C876600D4EB45 /* AppDelegate.swift */; };
 		70AB5779245C876600D4EB45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB5778245C876600D4EB45 /* SceneDelegate.swift */; };
 		70AB577C245C876600D4EB45 /* museum_digital.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70AB577A245C876600D4EB45 /* museum_digital.xcdatamodeld */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		70694097245D5BEB003273CE /* ObjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectsView.swift; sourceTree = "<group>"; };
+		70694099245D68D9003273CE /* ObjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectView.swift; sourceTree = "<group>"; };
 		70AB5773245C876600D4EB45 /* museum-digital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "museum-digital.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70AB5776245C876600D4EB45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70AB5778245C876600D4EB45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				70AB578D245CC84D00D4EB45 /* CityView.swift */,
 				70AB578F245CC8CA00D4EB45 /* MuseumView.swift */,
 				70694097245D5BEB003273CE /* ObjectsView.swift */,
+				70694099245D68D9003273CE /* ObjectView.swift */,
 			);
 			path = "museum-digital";
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 				70AB578E245CC84E00D4EB45 /* CityView.swift in Sources */,
 				70AB5790245CC8CA00D4EB45 /* MuseumView.swift in Sources */,
 				70AB5777245C876600D4EB45 /* AppDelegate.swift in Sources */,
+				7069409A245D68D9003273CE /* ObjectView.swift in Sources */,
 				70AB577E245C876600D4EB45 /* ContentView.swift in Sources */,
 				70AB5779245C876600D4EB45 /* SceneDelegate.swift in Sources */,
 			);
