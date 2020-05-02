@@ -10,62 +10,63 @@ import SwiftUI
 
 struct CityView: View {
     @State var hasLoaded = false
+    var city: City
     
     var body: some View {
-        NavigationView {
-            ZStack {
-                BackgroundImageView(image: "berlin-cover")
-                    .opacity(hasLoaded ? 1 : 0)
-                    .transition(.opacity)
-                    .animation(Animation.easeInOut(duration: 1).delay(0.1))
+        
+        ZStack {
+            BackgroundImageView(image: city.image)
+                .opacity(hasLoaded ? 1 : 0)
+                .transition(.opacity)
+                .animation(Animation.easeInOut(duration: 1).delay(0.1))
+            
+            VStack {
+                Spacer()
                 
-                VStack {
-                    Spacer()
-                    
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 20) {
-                            ForEach(0 ..< 5) { item in
-                                GeometryReader { geometry in
-                                    NavigationLink(destination: MuseumView()) {
-                                        MuseumCardView(image: "museum-photo", name: "Deutsches Technikmuseum")
-                                            .opacity(self.hasLoaded ? 1 : 0)
-                                            .transition(.opacity)
-                                            .animation(
-                                                Animation
-                                                    .easeInOut(duration:0.6)
-                                                    .delay(0.5 + Double(Float(item) * 0.2))
-                                        )
-                                    }
-                                    .buttonStyle(PlainButtonStyle())
-                                    .rotation3DEffect(
-                                        Angle(degrees: Double(geometry.frame(in: .global).minX - 30) / -20),
-                                        axis: (x: 0, y: 10, z: 0)
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 20) {
+                        ForEach(0 ..< 5) { item in
+                            GeometryReader { geometry in
+                                NavigationLink(destination: MuseumView()) {
+                                    MuseumCardView(image: "museum-photo", name: "Deutsches Technikmuseum")
+                                        .opacity(self.hasLoaded ? 1 : 0)
+                                        .transition(.opacity)
+                                        .animation(
+                                            Animation
+                                                .easeInOut(duration:0.6)
+                                                .delay(0.5 + Double(Float(item) * 0.2))
                                     )
                                 }
-                                .frame(width: 290, height: 210)
-                                
-                                
+                                .buttonStyle(PlainButtonStyle())
+                                .rotation3DEffect(
+                                    Angle(degrees: Double(geometry.frame(in: .global).minX - 30) / -20),
+                                    axis: (x: 0, y: 10, z: 0)
+                                )
                             }
+                            .frame(width: 290, height: 210)
+                            
+                            
                         }
-                        .padding(.leading, 30)
-                        .padding(.trailing, 50)
                     }
-                    .frame(height: 180)
-                    .offset(x: 0, y: 150)
-                    
-                    Spacer()
-                    
-                    CityNameView(loaded: hasLoaded, city: "Berlin", country: "Germany")
+                    .padding(.leading, 30)
+                    .padding(.trailing, 50)
                 }
-            }
-            .background(Color.black)
-            .edgesIgnoringSafeArea(.vertical)
-            .onAppear {
-                self.hasLoaded = true
+                .frame(height: 180)
+                .offset(x: 0, y: 150)
+                
+                Spacer()
+                
+                CityNameView(loaded: hasLoaded, city: city.name, country: "Germany")
             }
         }
-        
+        .background(Color.black)
+        .edgesIgnoringSafeArea(.vertical)
+        .onAppear {
+            self.hasLoaded = true
+        }
     }
+    
+    
 }
 
 struct MuseumCardView: View {
@@ -157,6 +158,6 @@ struct BackgroundImageView: View {
 
 struct CityView_Previews: PreviewProvider {
     static var previews: some View {
-        CityView()
+        CityView(city: cities[0])
     }
 }

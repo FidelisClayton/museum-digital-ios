@@ -19,6 +19,7 @@
 		70AB578E245CC84E00D4EB45 /* CityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB578D245CC84D00D4EB45 /* CityView.swift */; };
 		70AB5790245CC8CA00D4EB45 /* MuseumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB578F245CC8CA00D4EB45 /* MuseumView.swift */; };
 		70B703D4245DB0AD0082475A /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B703D3245DB0AD0082475A /* CollectionView.swift */; };
+		70B703D8245DED660082475A /* CitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B703D7245DED660082475A /* CitiesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		70AB578D245CC84D00D4EB45 /* CityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityView.swift; sourceTree = "<group>"; };
 		70AB578F245CC8CA00D4EB45 /* MuseumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseumView.swift; sourceTree = "<group>"; };
 		70B703D3245DB0AD0082475A /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		70B703D7245DED660082475A /* CitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				70AB5781245C876800D4EB45 /* Preview Content */,
 				70AB578D245CC84D00D4EB45 /* CityView.swift */,
 				70AB578F245CC8CA00D4EB45 /* MuseumView.swift */,
+				70B703D7245DED660082475A /* CitiesView.swift */,
 				70694097245D5BEB003273CE /* ObjectsView.swift */,
 				70694099245D68D9003273CE /* ObjectView.swift */,
 				70B703D3245DB0AD0082475A /* CollectionView.swift */,
@@ -109,6 +112,8 @@
 			dependencies = (
 			);
 			name = "museum-digital";
+			packageProductDependencies = (
+			);
 			productName = "museum-digital";
 			productReference = 70AB5773245C876600D4EB45 /* museum-digital.app */;
 			productType = "com.apple.product-type.application";
@@ -137,6 +142,8 @@
 				Base,
 			);
 			mainGroup = 70AB576A245C876600D4EB45;
+			packageReferences = (
+			);
 			productRefGroup = 70AB5774245C876600D4EB45 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -169,6 +176,7 @@
 				70694098245D5BEB003273CE /* ObjectsView.swift in Sources */,
 				70AB578E245CC84E00D4EB45 /* CityView.swift in Sources */,
 				70AB5790245CC8CA00D4EB45 /* MuseumView.swift in Sources */,
+				70B703D8245DED660082475A /* CitiesView.swift in Sources */,
 				70AB5777245C876600D4EB45 /* AppDelegate.swift in Sources */,
 				7069409A245D68D9003273CE /* ObjectView.swift in Sources */,
 				70AB577E245C876600D4EB45 /* ContentView.swift in Sources */,
