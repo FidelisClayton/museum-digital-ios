@@ -18,6 +18,7 @@
 		70AB5786245C876800D4EB45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70AB5784245C876800D4EB45 /* LaunchScreen.storyboard */; };
 		70AB578E245CC84E00D4EB45 /* CityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB578D245CC84D00D4EB45 /* CityView.swift */; };
 		70AB5790245CC8CA00D4EB45 /* MuseumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB578F245CC8CA00D4EB45 /* MuseumView.swift */; };
+		70B703D4245DB0AD0082475A /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B703D3245DB0AD0082475A /* CollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		70AB5787245C876800D4EB45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70AB578D245CC84D00D4EB45 /* CityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityView.swift; sourceTree = "<group>"; };
 		70AB578F245CC8CA00D4EB45 /* MuseumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseumView.swift; sourceTree = "<group>"; };
+		70B703D3245DB0AD0082475A /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				70AB578F245CC8CA00D4EB45 /* MuseumView.swift */,
 				70694097245D5BEB003273CE /* ObjectsView.swift */,
 				70694099245D68D9003273CE /* ObjectView.swift */,
+				70B703D3245DB0AD0082475A /* CollectionView.swift */,
 			);
 			path = "museum-digital";
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70B703D4245DB0AD0082475A /* CollectionView.swift in Sources */,
 				70AB577C245C876600D4EB45 /* museum_digital.xcdatamodeld in Sources */,
 				70694098245D5BEB003273CE /* ObjectsView.swift in Sources */,
 				70AB578E245CC84E00D4EB45 /* CityView.swift in Sources */,
