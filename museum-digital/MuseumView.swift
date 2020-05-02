@@ -10,7 +10,6 @@ import SwiftUI
 
 struct MuseumView: View {
     var body: some View {
-        NavigationView {
             ScrollView(showsIndicators: false) {
                 VStack(alignment: .leading, spacing: 35) {
                     MuseumInfoView()
@@ -24,13 +23,14 @@ struct MuseumView: View {
                 .padding(.horizontal)
                 .navigationBarTitle("Deutsches Technikmuseum")
             }
-        }
     }
 }
 
 struct MuseumView_Previews: PreviewProvider {
     static var previews: some View {
-        MuseumView()
+        NavigationView {
+            MuseumView()
+        }
     }
 }
 
@@ -53,7 +53,7 @@ struct MuseumObjectsView: View {
                 
                 Spacer()
                 
-                NavigationLink(destination: Text("All objects")) {
+                NavigationLink(destination: ObjectsView()) {
                     Text("All")
                         .foregroundColor(Color.black.opacity(0.8))
                         .bold()
@@ -163,15 +163,11 @@ struct MuseumCollectionItemView: View {
     }
 }
 
-struct Section: Identifiable {
+struct MuseumObject: Identifiable {
     var id = UUID()
     var title: String
-    var text: String
-    var logo: String
-    var image: Image
-    var color: Color
+    var image: String
 }
-
 
 struct MuseumCollection: Identifiable {
     var id = UUID()
@@ -184,6 +180,13 @@ let collections = [
     MuseumCollection(title: "Historisches Archiv", image: "collection-2-cover"),
     MuseumCollection(title: "Druck und Papier", image: "collection-3-cover"),
     MuseumCollection(title: "Handwerk und Produktion", image: "collection-4-cover"),
+]
+
+let objects = [
+    MuseumObject(title: "Automatischer Toaster Typ E WK 0063 Modell AT 21 'automatic toaster'", image: "object-1"),
+    MuseumObject(title: "Elektrischer Zigarrenanzünder AEG, Nachbau", image: "object-2"),
+    MuseumObject(title: "Elektrische Kaffee- und Teemaschine AEG", image: "object-3"),
+    MuseumObject(title: "Elektrischer Tee- und Wasserkessel AEG", image: "object-4")
 ]
 
 struct MuseumCollectionsView: View {
