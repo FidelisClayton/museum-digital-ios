@@ -88,10 +88,10 @@ struct ObjectInfoView: View {
                         .foregroundColor(Color.black.opacity(0.2))
                 }
                 .frame(maxWidth: .infinity)
-                .offset(y: -10)
+                .offset(y: -25)
                 
                 Text(object.title)
-                    .font(.title)
+                    .font(.system(size: 23))
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .lineLimit(3)
             }
@@ -130,7 +130,7 @@ struct ObjectInfoView: View {
         .frame(maxWidth: .infinity)
         .frame(height: screenSize.height - 150)
         .background(Color.white)
-        .cornerRadius(20)
+        .cornerRadius(40)
     }
 }
 
