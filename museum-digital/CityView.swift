@@ -26,7 +26,7 @@ struct CityView: View {
                         HStack(spacing: 20) {
                             ForEach(0 ..< 5) { item in
                                 GeometryReader { geometry in
-                                    NavigationLink(destination: Text("Museum")) {
+                                    NavigationLink(destination: MuseumView()) {
                                         MuseumCardView(image: "museum-photo", name: "Deutsches Technikmuseum")
                                             .opacity(self.hasLoaded ? 1 : 0)
                                             .transition(.opacity)
