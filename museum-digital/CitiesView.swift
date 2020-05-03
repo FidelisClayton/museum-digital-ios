@@ -9,44 +9,28 @@
 import SwiftUI
 
 struct CitiesView: View {
+    @State var subsets: [Subset] = []
+    
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack(spacing: 30) {
                 VStack(spacing: 16) {
-                    Text("States")
+                    Text("Subsets")
                         .foregroundColor(Color.black.opacity(0.8))
                         .font(.system(size: 25))
                         .bold()
                         .frame(maxWidth: .infinity, alignment: .leading)
                     
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 16) {
-                            ForEach(cities) { city in
-                                NavigationLink(destination: CityView(city: city)) {
-                                    CityCardView(city: city, height: 300)
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(spacing: 16) {
+                                ForEach(self.subsets) { subset in
+                                    NavigationLink(destination: CityView(subset: subset)) {
+                                        CityCardView(city: subset, height: 300)
+                                    }
                                 }
                             }
+                            .frame(height: 300)
                         }
-                    }
-                }
-                
-                VStack(spacing: 16) {
-                    Text("Special")
-                        .foregroundColor(Color.black.opacity(0.8))
-                        .font(.system(size: 25))
-                        .bold()
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 16) {
-                            ForEach(cities) { city in
-                                NavigationLink(destination: CityView(city: city)) {
-                                    CityCardView(city: city, height: 220)
-                                }
-                            }
-                        }
-                    }
-                    
                 }
                 
                 Spacer()
@@ -54,6 +38,11 @@ struct CitiesView: View {
         }
         .padding(.leading, 16)
         .navigationBarTitle("Digital Museum")
+        .onAppear {
+            Api().getSubsets { (subsets) in
+                self.subsets = subsets
+            }
+        }
     }
 }
 
@@ -65,24 +54,22 @@ struct CitiesView_Previews: PreviewProvider {
     }
 }
 
-struct City: Identifiable, Hashable {
-    let id = UUID()
-    var name: String
-    var image: String
-}
 
-let cities = [
-    City(name: "Berlin", image: "berlin-cover"),
-    City(name: "Bayern", image: "bayern-cover"),
-    City(name: "Baden-Württemberg", image: "baden-wurttemberg-cover"),
-    City(name: "Saxony-Anhalt", image: "saxony-anhalt-cover"),
-    City(name: "Saxony", image: "saxony-cover"),
-    City(name: "Brandenburg", image: "brandenburg-cover"),
-    City(name: "Rhineland", image: "mainz-cover"),
-]
+
+
+
+//let cities = [
+//    City(name: "Berlin", image: "berlin-cover"),
+//    City(name: "Bayern", image: "bayern-cover"),
+//    City(name: "Baden-Württemberg", image: "baden-wurttemberg-cover"),
+//    City(name: "Saxony-Anhalt", image: "saxony-anhalt-cover"),
+//    City(name: "Saxony", image: "saxony-cover"),
+//    City(name: "Brandenburg", image: "brandenburg-cover"),
+//    City(name: "Rhineland", image: "mainz-cover"),
+//]
 
 struct CityCardView: View {
-    var city: City
+    var city: Subset
     var height: CGFloat
     
     var body: some View {

@@ -7,15 +7,17 @@
 //
 
 import SwiftUI
+import KingfisherSwiftUI
 
 struct CityView: View {
+    var subset: Subset
+    
+    @State var institutions: [Institution] = []
     @State var hasLoaded = false
-    var city: City
     
     var body: some View {
-        
-        ZStack {
-            BackgroundImageView(image: city.image)
+        return ZStack {
+            BackgroundImageView(image: subset.image)
                 .opacity(hasLoaded ? 1 : 0)
                 .transition(.opacity)
                 .animation(Animation.easeInOut(duration: 1).delay(0.1))
@@ -25,44 +27,48 @@ struct CityView: View {
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 20) {
-                        ForEach(0 ..< 5) { item in
+                        ForEach(institutions.indices, id: \.self) { index in
                             GeometryReader { geometry in
                                 NavigationLink(destination: MuseumView()) {
-                                    MuseumCardView(image: "museum-photo", name: "Deutsches Technikmuseum")
+                                    MuseumCardView(image: self.institutions[index].image, name: self.institutions[index].name)
                                         .opacity(self.hasLoaded ? 1 : 0)
                                         .transition(.opacity)
                                         .animation(
                                             Animation
                                                 .easeInOut(duration:0.6)
-                                                .delay(0.5 + Double(Float(item) * 0.2))
+                                                .delay(0.5 + Double(Float(index) * 0.2))
                                     )
                                 }
-                                .buttonStyle(PlainButtonStyle())
                                 .rotation3DEffect(
                                     Angle(degrees: Double(geometry.frame(in: .global).minX - 30) / -20),
                                     axis: (x: 0, y: 10, z: 0)
                                 )
                             }
                             .frame(width: 290, height: 210)
-                            
-                            
                         }
                     }
+                    .frame(height: 210)
                     .padding(.leading, 30)
                     .padding(.trailing, 50)
                 }
-                .frame(height: 180)
+                .frame(height: 210)
                 .offset(x: 0, y: 150)
                 
                 Spacer()
                 
-                CityNameView(loaded: hasLoaded, city: city.name, country: "Germany")
+                CityNameView(loaded: hasLoaded, city: subset.name, institutions: subset.institutions)
             }
         }
         .background(Color.black)
         .edgesIgnoringSafeArea(.vertical)
         .onAppear {
-            self.hasLoaded = true
+            Api().getInstitutions(subsetId: self.subset.id) { (institutions) in
+                self.institutions = institutions
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                    self.hasLoaded = true
+                }
+            }
         }
     }
     
@@ -76,7 +82,8 @@ struct MuseumCardView: View {
     var body: some View {
         ZStack {
             HStack(alignment: .top) {
-                Image(image)
+                KFImage(URL(string: image)!)
+                    .renderingMode(.original)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 70, height: 80, alignment: .trailing)
@@ -93,6 +100,7 @@ struct MuseumCardView: View {
                     .foregroundColor(Color.black.opacity(0.8))
                     .font(.title)
                     .bold()
+                    .lineLimit(2)
                     .frame(width: 280, alignment: .leading)
             }
         }
@@ -107,7 +115,7 @@ struct MuseumCardView: View {
 struct CityNameView: View {
     var loaded: Bool
     var city: String
-    var country: String
+    var institutions: Int
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -119,7 +127,7 @@ struct CityNameView: View {
                 .transition(.opacity)
                 .animation(Animation.easeInOut(duration: 0.6).delay(0.2))
             
-            Text(country)
+            Text("\(institutions) museums")
                 .foregroundColor(Color.white.opacity(0.7))
                 .opacity(loaded ? 1 : 0)
                 .transition(.opacity)
@@ -158,6 +166,8 @@ struct BackgroundImageView: View {
 
 struct CityView_Previews: PreviewProvider {
     static var previews: some View {
-        CityView(city: cities[0])
+        NavigationView {
+            CityView(subset: exampleSubset)
+        }
     }
 }
