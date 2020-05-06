@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct Institution: Decodable, Identifiable, Equatable {
+struct Institution: Decodable, Identifiable, Equatable, Hashable {
     var id: Int
     var name: String
     var description: String

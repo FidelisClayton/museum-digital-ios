@@ -108,7 +108,7 @@ struct MuseumCardView: View {
         .padding()
         .background(Color.white)
         .cornerRadius(10)
-        
+        .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)).opacity(0.3), radius: 20, x: 0, y: 20)
     }
 }
 

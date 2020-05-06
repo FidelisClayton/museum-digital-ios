@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70354670245F1B0C0006046A /* QGrid in Frameworks */ = {isa = PBXBuildFile; productRef = 7035466F245F1B0C0006046A /* QGrid */; };
 		70694098245D5BEB003273CE /* ObjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70694097245D5BEB003273CE /* ObjectsView.swift */; };
 		7069409A245D68D9003273CE /* ObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70694099245D68D9003273CE /* ObjectView.swift */; };
 		707D96B7245E9ED1003DE418 /* Subset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707D96B6245E9ED1003DE418 /* Subset.swift */; };
@@ -33,6 +34,7 @@
 		70AB5790245CC8CA00D4EB45 /* MuseumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB578F245CC8CA00D4EB45 /* MuseumView.swift */; };
 		70B703D4245DB0AD0082475A /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B703D3245DB0AD0082475A /* CollectionView.swift */; };
 		70B703D8245DED660082475A /* CitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B703D7245DED660082475A /* CitiesView.swift */; };
+		70E21CC62461D2FC008A66E6 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E21CC52461D2FC008A66E6 /* ActivityIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -71,6 +73,7 @@
 		70AB578F245CC8CA00D4EB45 /* MuseumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseumView.swift; sourceTree = "<group>"; };
 		70B703D3245DB0AD0082475A /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		70B703D7245DED660082475A /* CitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesView.swift; sourceTree = "<group>"; };
+		70E21CC52461D2FC008A66E6 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 				707D96CF245ECF4C003DE418 /* KingfisherSwiftUI in Frameworks */,
 				707D96CC245ECF4C003DE418 /* KingfisherSwiftUIDynamic in Frameworks */,
 				707D96CA245ECF4C003DE418 /* Kingfisher in Frameworks */,
+				70354670245F1B0C0006046A /* QGrid in Frameworks */,
 				707D96C5245ECF4C003DE418 /* KingfisherSwiftUIStatic in Frameworks */,
 				707D96C7245ECF4C003DE418 /* KingfisherDynamic in Frameworks */,
 				707D96C3245ECF4C003DE418 /* KingfisherStatic in Frameworks */,
@@ -131,6 +135,7 @@
 				70AB578D245CC84D00D4EB45 /* CityView.swift */,
 				70AB578F245CC8CA00D4EB45 /* MuseumView.swift */,
 				70B703D7245DED660082475A /* CitiesView.swift */,
+				70E21CC52461D2FC008A66E6 /* ActivityIndicator.swift */,
 				70694097245D5BEB003273CE /* ObjectsView.swift */,
 				70694099245D68D9003273CE /* ObjectView.swift */,
 				707D96BD245EADF5003DE418 /* DataStore.swift */,
@@ -172,6 +177,7 @@
 				707D96C9245ECF4C003DE418 /* Kingfisher */,
 				707D96CB245ECF4C003DE418 /* KingfisherSwiftUIDynamic */,
 				707D96CE245ECF4C003DE418 /* KingfisherSwiftUI */,
+				7035466F245F1B0C0006046A /* QGrid */,
 			);
 			productName = "museum-digital";
 			productReference = 70AB5773245C876600D4EB45 /* museum-digital.app */;
@@ -203,6 +209,7 @@
 			mainGroup = 70AB576A245C876600D4EB45;
 			packageReferences = (
 				707D96C1245ECF4C003DE418 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				7035466E245F1B0C0006046A /* XCRemoteSwiftPackageReference "QGrid" */,
 			);
 			productRefGroup = 70AB5774245C876600D4EB45 /* Products */;
 			projectDirPath = "";
@@ -243,6 +250,7 @@
 				70AB5777245C876600D4EB45 /* AppDelegate.swift in Sources */,
 				707D96B7245E9ED1003DE418 /* Subset.swift in Sources */,
 				7069409A245D68D9003273CE /* ObjectView.swift in Sources */,
+				70E21CC62461D2FC008A66E6 /* ActivityIndicator.swift in Sources */,
 				70AB577E245C876600D4EB45 /* ContentView.swift in Sources */,
 				707D96C0245EB825003DE418 /* RemoteData.swift in Sources */,
 				70AB5779245C876600D4EB45 /* SceneDelegate.swift in Sources */,
@@ -441,6 +449,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		7035466E245F1B0C0006046A /* XCRemoteSwiftPackageReference "QGrid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Q-Mobile/QGrid";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.4;
+			};
+		};
 		707D96C1245ECF4C003DE418 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
@@ -452,6 +468,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7035466F245F1B0C0006046A /* QGrid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7035466E245F1B0C0006046A /* XCRemoteSwiftPackageReference "QGrid" */;
+			productName = QGrid;
+		};
 		707D96C2245ECF4C003DE418 /* KingfisherStatic */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 707D96C1245ECF4C003DE418 /* XCRemoteSwiftPackageReference "Kingfisher" */;
