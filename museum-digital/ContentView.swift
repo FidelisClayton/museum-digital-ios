@@ -12,12 +12,16 @@ struct ContentView: View {
     @State var hasLoaded = false
     
     var body: some View {
-        CityView()
+        NavigationView {
+            CitiesView()
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        NavigationView {
+            CitiesView()
+        }
     }
 }

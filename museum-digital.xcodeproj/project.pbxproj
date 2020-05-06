@@ -3,12 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70354670245F1B0C0006046A /* QGrid in Frameworks */ = {isa = PBXBuildFile; productRef = 7035466F245F1B0C0006046A /* QGrid */; };
 		70694098245D5BEB003273CE /* ObjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70694097245D5BEB003273CE /* ObjectsView.swift */; };
 		7069409A245D68D9003273CE /* ObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70694099245D68D9003273CE /* ObjectView.swift */; };
+		707D96B7245E9ED1003DE418 /* Subset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707D96B6245E9ED1003DE418 /* Subset.swift */; };
+		707D96B9245E9F02003DE418 /* Institution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707D96B8245E9F02003DE418 /* Institution.swift */; };
+		707D96BC245E9F60003DE418 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707D96BB245E9F60003DE418 /* Api.swift */; };
+		707D96BE245EADF5003DE418 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707D96BD245EADF5003DE418 /* DataStore.swift */; };
+		707D96C0245EB825003DE418 /* RemoteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707D96BF245EB825003DE418 /* RemoteData.swift */; };
+		707D96C3245ECF4C003DE418 /* KingfisherStatic in Frameworks */ = {isa = PBXBuildFile; productRef = 707D96C2245ECF4C003DE418 /* KingfisherStatic */; };
+		707D96C5245ECF4C003DE418 /* KingfisherSwiftUIStatic in Frameworks */ = {isa = PBXBuildFile; productRef = 707D96C4245ECF4C003DE418 /* KingfisherSwiftUIStatic */; };
+		707D96C7245ECF4C003DE418 /* KingfisherDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 707D96C6245ECF4C003DE418 /* KingfisherDynamic */; };
+		707D96C8245ECF4C003DE418 /* KingfisherDynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 707D96C6245ECF4C003DE418 /* KingfisherDynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		707D96CA245ECF4C003DE418 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 707D96C9245ECF4C003DE418 /* Kingfisher */; };
+		707D96CC245ECF4C003DE418 /* KingfisherSwiftUIDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 707D96CB245ECF4C003DE418 /* KingfisherSwiftUIDynamic */; };
+		707D96CD245ECF4C003DE418 /* KingfisherSwiftUIDynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 707D96CB245ECF4C003DE418 /* KingfisherSwiftUIDynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		707D96CF245ECF4C003DE418 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 707D96CE245ECF4C003DE418 /* KingfisherSwiftUI */; };
 		70AB5777245C876600D4EB45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB5776245C876600D4EB45 /* AppDelegate.swift */; };
 		70AB5779245C876600D4EB45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB5778245C876600D4EB45 /* SceneDelegate.swift */; };
 		70AB577C245C876600D4EB45 /* museum_digital.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70AB577A245C876600D4EB45 /* museum_digital.xcdatamodeld */; };
@@ -19,11 +33,33 @@
 		70AB578E245CC84E00D4EB45 /* CityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB578D245CC84D00D4EB45 /* CityView.swift */; };
 		70AB5790245CC8CA00D4EB45 /* MuseumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB578F245CC8CA00D4EB45 /* MuseumView.swift */; };
 		70B703D4245DB0AD0082475A /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B703D3245DB0AD0082475A /* CollectionView.swift */; };
+		70B703D8245DED660082475A /* CitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B703D7245DED660082475A /* CitiesView.swift */; };
+		70E21CC62461D2FC008A66E6 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E21CC52461D2FC008A66E6 /* ActivityIndicator.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		707D96D0245ECF4C003DE418 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				707D96CD245ECF4C003DE418 /* KingfisherSwiftUIDynamic in Embed Frameworks */,
+				707D96C8245ECF4C003DE418 /* KingfisherDynamic in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		70694097245D5BEB003273CE /* ObjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectsView.swift; sourceTree = "<group>"; };
 		70694099245D68D9003273CE /* ObjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectView.swift; sourceTree = "<group>"; };
+		707D96B6245E9ED1003DE418 /* Subset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subset.swift; sourceTree = "<group>"; };
+		707D96B8245E9F02003DE418 /* Institution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Institution.swift; sourceTree = "<group>"; };
+		707D96BB245E9F60003DE418 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		707D96BD245EADF5003DE418 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		707D96BF245EB825003DE418 /* RemoteData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteData.swift; sourceTree = "<group>"; };
 		70AB5773245C876600D4EB45 /* museum-digital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "museum-digital.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70AB5776245C876600D4EB45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70AB5778245C876600D4EB45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +72,8 @@
 		70AB578D245CC84D00D4EB45 /* CityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityView.swift; sourceTree = "<group>"; };
 		70AB578F245CC8CA00D4EB45 /* MuseumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseumView.swift; sourceTree = "<group>"; };
 		70B703D3245DB0AD0082475A /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		70B703D7245DED660082475A /* CitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesView.swift; sourceTree = "<group>"; };
+		70E21CC52461D2FC008A66E6 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,12 +81,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				707D96CF245ECF4C003DE418 /* KingfisherSwiftUI in Frameworks */,
+				707D96CC245ECF4C003DE418 /* KingfisherSwiftUIDynamic in Frameworks */,
+				707D96CA245ECF4C003DE418 /* Kingfisher in Frameworks */,
+				70354670245F1B0C0006046A /* QGrid in Frameworks */,
+				707D96C5245ECF4C003DE418 /* KingfisherSwiftUIStatic in Frameworks */,
+				707D96C7245ECF4C003DE418 /* KingfisherDynamic in Frameworks */,
+				707D96C3245ECF4C003DE418 /* KingfisherStatic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		707D96B5245E9EBF003DE418 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				707D96B6245E9ED1003DE418 /* Subset.swift */,
+				707D96B8245E9F02003DE418 /* Institution.swift */,
+				707D96BF245EB825003DE418 /* RemoteData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		70AB576A245C876600D4EB45 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +123,7 @@
 		70AB5775245C876600D4EB45 /* museum-digital */ = {
 			isa = PBXGroup;
 			children = (
+				707D96B5245E9EBF003DE418 /* Models */,
 				70AB5776245C876600D4EB45 /* AppDelegate.swift */,
 				70AB5778245C876600D4EB45 /* SceneDelegate.swift */,
 				70AB577D245C876600D4EB45 /* ContentView.swift */,
@@ -78,9 +134,13 @@
 				70AB5781245C876800D4EB45 /* Preview Content */,
 				70AB578D245CC84D00D4EB45 /* CityView.swift */,
 				70AB578F245CC8CA00D4EB45 /* MuseumView.swift */,
+				70B703D7245DED660082475A /* CitiesView.swift */,
+				70E21CC52461D2FC008A66E6 /* ActivityIndicator.swift */,
 				70694097245D5BEB003273CE /* ObjectsView.swift */,
 				70694099245D68D9003273CE /* ObjectView.swift */,
+				707D96BD245EADF5003DE418 /* DataStore.swift */,
 				70B703D3245DB0AD0082475A /* CollectionView.swift */,
+				707D96BB245E9F60003DE418 /* Api.swift */,
 			);
 			path = "museum-digital";
 			sourceTree = "<group>";
@@ -103,12 +163,22 @@
 				70AB576F245C876600D4EB45 /* Sources */,
 				70AB5770245C876600D4EB45 /* Frameworks */,
 				70AB5771245C876600D4EB45 /* Resources */,
+				707D96D0245ECF4C003DE418 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "museum-digital";
+			packageProductDependencies = (
+				707D96C2245ECF4C003DE418 /* KingfisherStatic */,
+				707D96C4245ECF4C003DE418 /* KingfisherSwiftUIStatic */,
+				707D96C6245ECF4C003DE418 /* KingfisherDynamic */,
+				707D96C9245ECF4C003DE418 /* Kingfisher */,
+				707D96CB245ECF4C003DE418 /* KingfisherSwiftUIDynamic */,
+				707D96CE245ECF4C003DE418 /* KingfisherSwiftUI */,
+				7035466F245F1B0C0006046A /* QGrid */,
+			);
 			productName = "museum-digital";
 			productReference = 70AB5773245C876600D4EB45 /* museum-digital.app */;
 			productType = "com.apple.product-type.application";
@@ -137,6 +207,10 @@
 				Base,
 			);
 			mainGroup = 70AB576A245C876600D4EB45;
+			packageReferences = (
+				707D96C1245ECF4C003DE418 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				7035466E245F1B0C0006046A /* XCRemoteSwiftPackageReference "QGrid" */,
+			);
 			productRefGroup = 70AB5774245C876600D4EB45 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -169,9 +243,16 @@
 				70694098245D5BEB003273CE /* ObjectsView.swift in Sources */,
 				70AB578E245CC84E00D4EB45 /* CityView.swift in Sources */,
 				70AB5790245CC8CA00D4EB45 /* MuseumView.swift in Sources */,
+				70B703D8245DED660082475A /* CitiesView.swift in Sources */,
+				707D96BC245E9F60003DE418 /* Api.swift in Sources */,
+				707D96BE245EADF5003DE418 /* DataStore.swift in Sources */,
+				707D96B9245E9F02003DE418 /* Institution.swift in Sources */,
 				70AB5777245C876600D4EB45 /* AppDelegate.swift in Sources */,
+				707D96B7245E9ED1003DE418 /* Subset.swift in Sources */,
 				7069409A245D68D9003273CE /* ObjectView.swift in Sources */,
+				70E21CC62461D2FC008A66E6 /* ActivityIndicator.swift in Sources */,
 				70AB577E245C876600D4EB45 /* ContentView.swift in Sources */,
+				707D96C0245EB825003DE418 /* RemoteData.swift in Sources */,
 				70AB5779245C876600D4EB45 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,6 +447,63 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7035466E245F1B0C0006046A /* XCRemoteSwiftPackageReference "QGrid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Q-Mobile/QGrid";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.4;
+			};
+		};
+		707D96C1245ECF4C003DE418 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.13.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7035466F245F1B0C0006046A /* QGrid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7035466E245F1B0C0006046A /* XCRemoteSwiftPackageReference "QGrid" */;
+			productName = QGrid;
+		};
+		707D96C2245ECF4C003DE418 /* KingfisherStatic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 707D96C1245ECF4C003DE418 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherStatic;
+		};
+		707D96C4245ECF4C003DE418 /* KingfisherSwiftUIStatic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 707D96C1245ECF4C003DE418 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherSwiftUIStatic;
+		};
+		707D96C6245ECF4C003DE418 /* KingfisherDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 707D96C1245ECF4C003DE418 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherDynamic;
+		};
+		707D96C9245ECF4C003DE418 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 707D96C1245ECF4C003DE418 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		707D96CB245ECF4C003DE418 /* KingfisherSwiftUIDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 707D96C1245ECF4C003DE418 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherSwiftUIDynamic;
+		};
+		707D96CE245ECF4C003DE418 /* KingfisherSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 707D96C1245ECF4C003DE418 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		70AB577A245C876600D4EB45 /* museum_digital.xcdatamodeld */ = {
